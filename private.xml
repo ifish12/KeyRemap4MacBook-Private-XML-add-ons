@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<root>
+
+
+<appdef>
+    <appname>CHROME</appname>
+    <equal>com.google.Chrome</equal>
+  </appdef>
+
+  <item>
+    <name>Swap CMDR and ALTR</name>
+    <identifier>private.swap_cmdl_and_altl</identifier>
+    <autogen>__KeyToKey__ KeyCode::OPTION_L, KeyCode::COMMAND_L</autogen>
+    <autogen>__KeyToKey__ KeyCode::COMMAND_L, KeyCode::OPTION_L</autogen>
+  </item>
+
+  <item>
+    <name>Swap CMDL and ALTL</name>
+    <identifier>private.swap_cmdr_and_altr</identifier>
+    <autogen>__KeyToKey__ KeyCode::OPTION_R, KeyCode::COMMAND_R</autogen>
+    <autogen>__KeyToKey__ KeyCode::COMMAND_R, KeyCode::OPTION_R</autogen>
+  </item>
+
+  <item>
+       <name>Make F3 = Volume Up</name>
+       <identifier>private.make_F3.volup</identifier>
+       <autogen> 
+       __KeyToConsumer__ 
+       KeyCode::F3, 
+       ConsumerKeyCode::VOLUME_UP 
+       </autogen> 
+  </item>
+
+  <item>
+       <name>Make F2 = Volume Down</name>
+       <identifier>private.make_F2.voldown</identifier>
+       <autogen> 
+       __KeyToConsumer__ 
+       KeyCode::F2, 
+       ConsumerKeyCode::VOLUME_DOWN
+       </autogen> 
+  </item>
+
+ <item>
+       <name>Make F1 = Volume Mute</name>
+       <identifier>private.make_F2.volm</identifier>
+       <autogen> 
+       __KeyToConsumer__ 
+       KeyCode::F1, 
+       ConsumerKeyCode::VOLUME_MUTE
+       </autogen> 
+  </item>
+
+   <item>
+    <name>Map Logitech Mouse Side Buttons to Back/Forward</name>
+    <identifier>private.swap_command_l_option_l_except_logitech</identifier>
+     <only>CHROME</only>
+    <device_only>DeviceVendor::LOGITECH,DeviceProduct::ANY</device_only>
+   <autogen>__PointingButtonToKey__ PointingButton::BUTTON4, KeyCode::CURSOR_LEFT, ModifierFlag::COMMAND_L</autogen>
+<autogen>__PointingButtonToKey__ PointingButton::BUTTON5, KeyCode::CURSOR_RIGHT, ModifierFlag::COMMAND_L</autogen>
+  </item>
+
+
+ <item>
+    <name>Map Logitech Mouse Side Buttons to Change OS X spaces</name>
+    <identifier>private.swap_ctrl_l_option_l_except_logitech</identifier>
+    <device_only>DeviceVendor::LOGITECH,DeviceProduct::ANY</device_only>
+   <autogen>__PointingButtonToKey__ PointingButton::BUTTON4, KeyCode::CURSOR_LEFT, ModifierFlag::CONTROL_L</autogen>
+<autogen>__PointingButtonToKey__ PointingButton::BUTTON5, KeyCode::CURSOR_RIGHT, ModifierFlag::CONTROL_L</autogen>
+  </item>
+
+</root>
